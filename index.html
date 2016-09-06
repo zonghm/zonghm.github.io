@@ -1,15 +1,79 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
-
+<div id="div1"/>
 <script>
   console.log(d3); // test if d3 is loaded
-
   // Add an SVG
-
+	var width = 400;
+	var height= 200;
+	var svgContainer = d3.select("#div1")
+     	       		     .append("svg")
+	  		     .attr("width",width)
+			     .attr("height",height);
   // Add Rectangles
-
+	var rect = svgContainer.append("rect")
+				.style("fill","red")
+				.attr("x",20)
+				.attr("y",40)
+				.attr("width",150)
+				.attr("height",80);
+	var rect1 = svgContainer.append("rect")
+				.style("fill","purple")
+				.attr("x",200)
+				.attr("y",60)
+				.attr("width",120)
+				.attr("height",60);
+		
   // Add Circles
-
+	var circle = svgContainer.append("circle")
+				.style("fill","black")
+				.attr("cx",50)
+				.attr("cy",120)
+				.attr("r",20);
+				
+	var circle1 = svgContainer.append("circle")
+				.style("fill","black")
+				.attr("cx",140)
+				.attr("cy",120)
+				.attr("r",20);
+	var circle2 = svgContainer.append("circle")
+				.style("fill","grey")
+				.attr("cx",230)
+				.attr("cy",120)
+				.attr("r",20);
+	var circle3 = svgContainer.append("circle")
+				.style("fill","grey")
+				.attr("cx",290)
+				.attr("cy",120)
+				.attr("r",20);
   // Add Lines
-
+	var line = svgContainer.append("line")
+				.attr("x1",10)
+				.attr("y1",140)
+				.attr("x2",350)
+				.attr("y2",140)
+				.attr("stroke-width",4)
+				.attr("stroke","black");
+	var line1 = svgContainer.append("line")
+				.attr("x1",15)
+				.attr("y1",130)
+				.attr("x2",360)
+				.attr("y2",130)
+				.attr("stroke-width",4)
+				.attr("stroke","grey")
+	var line2 = svgContainer.append("line")
+				.attr("x1",170)
+				.attr("y1",110)
+				.attr("x2",200)
+				.attr("y2",110)
+				.attr("stroke-width",6)
+				.attr("stroke","brown");
   // Add Polygons
+	var polygons = svgContainer.append("polygon")
+				.style("stroke","blue")
+				.style("fill","green")
+				.attr("points","200,60, 200,30, 250,30, 260,60");	
+	var polygons1 = svgContainer.append("polygon")
+				.style("stroke","yellow")
+				.style("fill","yellow")
+				.attr("points","320,110, 320,95, 310,100, 310,105");
 </script>
